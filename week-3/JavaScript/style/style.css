@@ -1,0 +1,300 @@
+/* General Setting */
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.content h1 {
+    font-size: 40px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+.mobileMode img {
+    width: 30px;
+    height: 30px;
+    float: right;
+}
+
+/* Nav Setting */
+.navigator {
+    height: 55px;
+}
+
+.navigator .item1 {
+    float: left;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.navigator .item2 {
+    margin-right: 10px;
+    float: right;
+    line-height: 50px;
+}
+
+.mobileMode img{
+    vertical-align:middle;
+}
+
+/* 中間內容 */
+.content {
+    display: flex;
+    height: 300px;
+    background-color: 	#ADD8E6;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 下方主體 */
+.bigBox {
+    width: 1200px;
+    margin: 20px auto;
+}
+
+/* 上方圖片區 */
+.top img {
+    width: 80px;
+    float: left;
+    padding-right: 10px;
+}
+
+.top {
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.top .t1, .t2 {
+    background-color: #ADD8E6;
+}
+
+.top p {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-left: 10px;
+}
+
+/* 下方圖片區 */
+.bottom {
+    height: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+    row-gap: 0px;
+}
+
+#L1 {
+    margin-top: -20px;
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 15px;
+    row-gap: 0px;
+}
+
+
+.b1 {
+    display: block;
+    height: 70%;
+    margin-bottom: 20px;
+}
+
+.b1 img {
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 202.05px;
+}
+
+.bp {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #D3D3D3;
+    text-align: center;
+    padding: 10px;
+}
+
+#second-row {
+    height: 70px;
+}
+
+#LoadMore, #BackTop {
+    text-align: center;
+    border: 2px solid #1e90ff;
+    color: #1e90ff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 50px auto;
+    line-height: 80px; 
+}
+
+#LoadMore p {
+    font-size: 12px;
+}
+
+#BackTop {
+    display: none;
+}
+
+#BackTop p{
+    font-size: 12px;
+
+}
+
+#LoadMore:hover {
+    color: white;
+    background-color: #1e90ff;
+    font-weight: bold;
+    cursor: pointer;
+}
+#BackTop:hover {
+    color: white;
+    background-color: #1e90ff;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* hr {
+border: 1px solid #D3D3D3;
+} */
+/* 顯示 */
+.desktopMode {
+    display: block;
+}
+
+.mobileMode {
+    display: none;
+}
+
+/* 600 像素 < 螢幕解析度的寬度 <= 1200 像素 */
+
+@media (max-width: 1200px) {
+    .bigBox {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .top img {
+        width: 80px;
+        height: 50px;
+        float: left;
+    }
+    .bottom {
+        height: 100%;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 15px;
+        /* row-gap: 20px; */
+    }
+
+    .bottom img {
+        height: 311px;
+    }
+    
+    #L1 img {
+        height: 311px;
+    }
+    
+    #L1 {
+        margin-top: -20px;
+        display: none;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+
+    .bp {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        background-color: #D3D3D3;
+        text-align: center;
+    }
+
+    #L1 .b1 {
+        margin-bottom: 5px;
+    }
+
+    #second-row {
+        display: flex;
+        width: 100%;
+    }
+    .desktopMode {
+        display: block;
+    }
+    
+    .mobileMode {
+        display: none;
+    }
+}
+
+
+/* 360 像素 < 螢幕解析度的寬度 <= 600 像素 */
+
+@media (max-width: 600px) {
+    .bigBox {
+        width: 90%;
+    }
+    
+    .top {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+        margin-bottom: 80px;
+    }
+
+    .bottom {
+        margin-top: 10px;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+    
+    #L1 {
+        margin-top: 15px;
+        display: none;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 15px;
+        row-gap: 35px;
+    }
+
+    .bottom img {
+        height: 350px;
+    }
+    
+    #L1 img {
+        height: 350px;
+    }
+
+    #second-row {
+        display: flex;
+        width: 100%;
+    }
+    
+    .desktopMode {
+        display: none;
+    }
+    
+    .mobileMode {
+        display: flex;
+        height: 55px;
+        float: right;
+        padding: 5px;
+        align-items: center;
+    }
+}
+
+
+
